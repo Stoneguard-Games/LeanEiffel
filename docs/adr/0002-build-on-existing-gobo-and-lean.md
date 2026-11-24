@@ -1,0 +1,3 @@
+# Build on the existing Gobo compiler and Lean 4
+
+LeanEiffel will use the existing Gobo Eiffel compiler and Lean 4 as the basis of the integrated project. The proposal to implement a deliberately limited Eiffel-subset compiler was rejected: the project should leverage the existing compiler rather than recreate that foundation. Static proof coverage may still grow incrementally under the accepted hybrid model; limited proof coverage must not be confused with a decision to replace Gobo with a smaller language implementation. Whether integration requires changes to either upstream project remains open.
