@@ -9,10 +9,11 @@ The first Wayfinder effort will produce an implementation-ready specification fo
 - Replace Eiffel's existing Design by Contract syntax with Lean-verifiable contract syntax. Lean contracts are the authoritative specification of preconditions, postconditions, and class invariants; they are not an additional annotation layer over separately authored Eiffel contracts.
 - Preserve runtime Design by Contract behavior, use Lean to prove supported contracts, and clearly report contracts that remain unproved. See [the hybrid verification decision](../adr/0001-hybrid-contract-verification.md).
 - Provide a command-line workflow with machine-readable diagnostics alongside readable output for humans. Diagnostics should identify each contract, its source location, and its verification result.
+- Keep authoritative contracts in companion `.lean` files. For the prototype, generate Eiffel assertions and compile them with stock Gobo. See [the contract placement and compiler integration decision](../adr/0003-companion-lean-contracts-and-stock-gobo.md).
 
 ## Open design work
 
-Contract placement and concrete syntax, runtime enforcement of Lean contracts, compiler integration, the meaning and scope of proof claims, proof authoring, exact diagnostic formats, platform support, and first-release acceptance examples remain to be decided through the Wayfinder map. No architecture has been selected and no executable prototype has been built.
+Contract binding syntax, supported contract expressions, the meaning and scope of proof claims, proof authoring, exact diagnostic formats, platform support, and first-release acceptance examples remain open. The prototype will test whether generated Eiffel assertions agree with the authoritative Lean predicates.
 
 ## Sources
 

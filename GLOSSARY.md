@@ -5,7 +5,7 @@ LeanEiffel is an Eiffel-derived programming language and integrated toolchain in
 ## Language
 
 **Lean contract**:
-The authoritative specification of a LeanEiffel precondition, postcondition, or class invariant, expressed in Lean-verifiable syntax in place of Eiffel's existing contract syntax.
+The authoritative specification of a LeanEiffel precondition, postcondition, or class invariant, written in a companion `.lean` module linked to its Eiffel class or feature.
 
 **Hybrid verification**:
 LeanEiffel's contract policy: runtime enforcement preserves Design by Contract behavior, supported Lean contracts can be proved, and contracts that remain unproved are explicitly reported.
