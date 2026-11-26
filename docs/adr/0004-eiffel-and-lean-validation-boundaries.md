@@ -12,6 +12,8 @@ LeanEiffel validates the contract layer at three levels:
 
 Report unresolved proof obligations explicitly, including those arising at levels B and C. An unproved obligation can still run with its runtime check. If the frontend cannot generate a runtime assertion for a declared contract, the contract build fails.
 
+LeanEiffel should draw on Lean and Eiffel's existing abstractions to model classes, class state, integers, floating-point numbers, and other domain concepts. The model may express an abstract view of an Eiffel class or value. Whenever a proof is used to make a claim about the executing program, its assumptions must explain how that view relates to the Eiffel implementation and to the runtime behavior covered by the claim. Choose initial examples for the evidence they provide. They do not set the limits of the modeling approach.
+
 Report a routine obligation as proved only for a Lean-checked theorem tied to the corresponding Eiffel implementation, effective contract, and execution model. Disclose the assumptions supporting that claim. Report checker correspondence separately from routine correctness. The initial proof coverage and handling of a demonstrated violation are open design questions.
 
 [Wayfinder decision ticket](https://github.com/Stoneguard-Games/LeanEiffel/issues/5)
