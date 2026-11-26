@@ -14,6 +14,6 @@ Unresolved required proof obligations at levels B and C fail the normal build. F
 
 LeanEiffel should draw on Lean and Eiffel's existing abstractions to model classes, class state, integers, floating-point numbers, and other domain concepts. The model may express an abstract view of an Eiffel class or value. Whenever a proof is used to make a claim about the executing program, its assumptions must explain how that view relates to the Eiffel implementation and to the runtime behavior covered by the claim. Choose initial examples for the evidence they provide. They do not set the limits of the modeling approach.
 
-Report a routine obligation as proved only for a Lean-checked theorem tied to the corresponding Eiffel implementation, effective contract, and execution model. Disclose the assumptions supporting that claim. Report checker correspondence separately from routine correctness. The exact proof obligations and coverage boundaries remain open design questions.
+Report a routine obligation as proved only for a Lean-checked theorem tied to the corresponding Eiffel implementation, effective contract, and execution model. Disclose the assumptions supporting that claim. Report checker correspondence separately from routine correctness. See [the routine and inheritance decision](0007-full-routine-and-inherited-contracts.md) for the required coverage, including completion and inherited guarantees.
 
 [Wayfinder decision ticket](https://github.com/Stoneguard-Games/LeanEiffel/issues/5)

@@ -13,10 +13,11 @@ The first Wayfinder effort will produce an implementation-ready specification fo
 - Keep Gobo as the canonical Eiffel validator and make contract declarations optional. Validate Lean contracts as Lean declarations, against relevant contracts of interacting classes, and against the Eiffel features they govern. See [the validation boundaries decision](../adr/0004-eiffel-and-lean-validation-boundaries.md).
 - Use Lean and Eiffel's existing expressive power to model classes, integers, floating-point numbers, and other domain concepts. Relate those models to Eiffel execution when claiming a proof about the program. See [the validation boundaries decision](../adr/0004-eiffel-and-lean-validation-boundaries.md).
 - Allow verified code to call or inherit existing Eiffel classes through declared, checked interfaces. Warn about uses without Lean validation and identify whether they retain native Eiffel contracts. See [the incremental adoption decision](../adr/0006-allow-incremental-eiffel-adoption.md).
+- Prove each class and feature meets its full contract in the verified scope. Descendants accept the union of ancestor preconditions and meet every inherited postcondition on each normal return. See [the routine and inheritance decision](../adr/0007-full-routine-and-inherited-contracts.md).
 
 ## Open design work
 
-Contract binding syntax, supported contract expressions, the exact required contract coverage and proof obligations, proof authoring, exact diagnostic formats, platform support, and first-release acceptance examples remain open. The prototype will test whether generated Eiffel assertions agree with the authoritative Lean predicates.
+Contract binding syntax, supported contract expressions, the generation and discharge of proof obligations, proof authoring, exact diagnostic formats, platform support, and first-release acceptance examples remain open. The prototype will test whether generated Eiffel assertions agree with the authoritative Lean predicates.
 
 ## Sources
 
