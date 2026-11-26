@@ -10,10 +10,10 @@ LeanEiffel validates the contract layer at three levels:
 | B. Relationships between classes | Validate the contract relationships that apply when classes interact, including relevant inherited contracts and contracts at call boundaries. |
 | C. Relationship to the Eiffel implementation | Validate the contract's binding to the relevant Eiffel class or feature and check that the implementation satisfies its obligations where static verification is supported. |
 
-Report unresolved proof obligations explicitly, including those arising at levels B and C. An unproved obligation can still run with its runtime check. If the frontend cannot generate a runtime assertion for a declared contract, the contract build fails.
+Unresolved required proof obligations at levels B and C fail the normal build. Failure to generate a required runtime assertion also fails the build. See [the verified build decision](0005-require-complete-contract-verification.md).
 
 LeanEiffel should draw on Lean and Eiffel's existing abstractions to model classes, class state, integers, floating-point numbers, and other domain concepts. The model may express an abstract view of an Eiffel class or value. Whenever a proof is used to make a claim about the executing program, its assumptions must explain how that view relates to the Eiffel implementation and to the runtime behavior covered by the claim. Choose initial examples for the evidence they provide. They do not set the limits of the modeling approach.
 
-Report a routine obligation as proved only for a Lean-checked theorem tied to the corresponding Eiffel implementation, effective contract, and execution model. Disclose the assumptions supporting that claim. Report checker correspondence separately from routine correctness. The initial proof coverage and handling of a demonstrated violation are open design questions.
+Report a routine obligation as proved only for a Lean-checked theorem tied to the corresponding Eiffel implementation, effective contract, and execution model. Disclose the assumptions supporting that claim. Report checker correspondence separately from routine correctness. The exact proof obligations and coverage boundaries remain open design questions.
 
 [Wayfinder decision ticket](https://github.com/Stoneguard-Games/LeanEiffel/issues/5)
